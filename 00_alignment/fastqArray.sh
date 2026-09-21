@@ -14,7 +14,7 @@ set -euo pipefail
 #SBATCH --partition=commons            
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --time=10:00:00                  
+#SBATCH --time=3:00:00                  
 #SBATCH --mem-per-cpu=1000m 
 #SBATCH --array=1-62%6                   # 62 active files, max 6 downloading at once (suggested to not overload system?)
 #SBATCH --output=/home/ak308/Dholes/output/fastq_dl_%A_%a.out
