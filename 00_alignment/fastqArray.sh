@@ -7,6 +7,8 @@
 # Submit with:   sbatch download_fastq_array_v2.sh
 # =============================================================================
 
+set -euo pipefail
+
 #SBATCH --job-name=fastq_download
 #SBATCH --account=commons              
 #SBATCH --partition=commons            
@@ -15,8 +17,8 @@
 #SBATCH --time=10:00:00                  
 #SBATCH --mem-per-cpu=1000m 
 #SBATCH --array=1-62%6                   # 62 active files, max 6 downloading at once (suggested to not overload system?)
-#SBATCH --output=/home/ak308/Dholes/output/fastq_dl.out
-#SBATCH --error=/home/ak308/Dholes/output/fastq_dl.err
+#SBATCH --output=/home/ak308/Dholes/output/fastq_dl_%A_%a.out
+#SBATCH --error=/home/ak308/Dholes/output/fastq_dl_%A_%a.err
 
 LIST="fastq_list.tsv"
 DEST="."                       
