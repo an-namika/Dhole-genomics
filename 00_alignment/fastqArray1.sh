@@ -12,7 +12,7 @@
 
 echo "My SLURM_ARRAY_TASK_ID: ${SLURM_ARRAY_TASK_ID}"
 
-LIST="/scratch/ak308/Dholes/00_alignment/fastq_list_firstsix.tsv"
+LIST="/scratch/ak308/Dholes/00_alignment/publishedfastq/fastq_list_firstsix.tsv"
 
 NAME=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${LIST} | cut -f1)
 URL=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${LIST} | cut -f2)
