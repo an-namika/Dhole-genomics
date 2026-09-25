@@ -11,7 +11,7 @@
  
 echo "My SLURM_ARRAY_TASK_ID: $SLURM_ARRAY_TASK_ID"
  
-DIR=/scratch/ak308/Dholes/00_alignment/publishedfastqs
+DIR=/scratch/ak308/Dholes/00_alignment/publishedfastq
 OUT=/scratch/ak308/Dholes/00_alignment/cleanedfastq
  
 SAMPLES=(SRR8472966 SRR8472967)
