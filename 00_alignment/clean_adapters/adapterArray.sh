@@ -5,8 +5,8 @@
 #SBATCH --ntasks=1
 #SBATCH --mem=40G
 #SBATCH --time=13:00:00
-#SBATCH --output=/scratch/ak308/Dholes/output/adapter_%A_%a.out
-#SBATCH --error=/scratch/YOUR_NETID/Dhole/slurmout/adapter_%A_%a.err
+#SBATCH --output=/home/ak308/Dholes/output/adapter_%A_%a.out
+#SBATCH --error=/home/ak308/Dholes/output/adapter_%A_%a.err
 #SBATCH --array=1-20%10
  
 echo "My SLURM_ARRAY_TASK_ID: $SLURM_ARRAY_TASK_ID"
