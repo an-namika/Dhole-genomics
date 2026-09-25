@@ -11,8 +11,8 @@
  
 echo "My SLURM_ARRAY_TASK_ID: $SLURM_ARRAY_TASK_ID"
  
-LIST=/scratch/ak308/Dholes/00_alignment/publishedfastqs/fastqlist_pairs.txt
-DIR=/scratch/ak308/Dholes/00_alignment/publishedfastqs
+LIST=/scratch/ak308/Dholes/00_alignment/publishedfastq/fastqlist_pairs.txt
+DIR=/scratch/ak308/Dholes/00_alignment/publishedfastq
 OUT=/scratch/ak308/Dholes/00_alignment/cleanedfastq
  
 READ1=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${LIST} | cut -f1)
