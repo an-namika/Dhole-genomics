@@ -4,24 +4,22 @@
 #SBATCH --ntasks=1
 #SBATCH --mem=40G
 #SBATCH --time=2-23:00:00
-#SBATCH --output=/scratch/lh106/GoldenJackal/slurmout/alignment_GoldenJackal_.out
-#SBATCH --error=/scratch/lh106/GoldenJackal/slurmout/alignment_GoldenJackal_.err
-#SBATCH --output=/scratch/ak308/Dhole/slurmout/alignment_%A_%a.out
-#SBATCH --error=/scratch/ak308/Dhole/slurmout/alignment_%A_%a.err
+#SBATCH --output=/scratch/ak308/Dholes/output/alignment_Dhole_%A_%a.out
+#SBATCH --error=/scratch/ak308/Dholes/output/alignment_Dhole_%A_%a.err
 #SBATCH --array=1
 
 echo "My SLURM_ARRAY_TASK_ID: ${SLURM_ARRAY_TASK_ID}"
 
-LIST=/scratch/lh106/GoldenJackal/scripts/listfastqfiles.txt
+LIST=/scratch/ak308/Dholes/00_alignment/scripts/listfastqfiles.txt
 
 READ1=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${LIST} | cut -f1)
 READ2=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${LIST} | cut -f2)
 RUN=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${LIST} | cut -f3)
 SAMPLE=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${LIST} | cut -f4)
 
-FASTQ_DIR=/scratch/lh106/GoldenJackal/cleaned_fastqs
-REF=/scratch/lh106/GoldenJackal/RefGenome/GCF_053574225.1_VMU_Caureus_v.1.0_genomic.fna
-OUT_DIR=/scratch/lh106/GoldenJackal/bams
+FASTQ_DIR=/scratch/ak308/Dholes/00_alignment/cleanedfastqs
+REF=/scratch/ak308/Dholes/00_alignment/reference/GCF_053574225.1_VMU_Caureus_v.1.0_genomic.fna
+OUT_DIR=/scratch/ak308/Dholes/00_alignment/bams
 
 module purge
 module load GCCcore/12.3.0
