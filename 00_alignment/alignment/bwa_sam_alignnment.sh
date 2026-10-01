@@ -18,7 +18,7 @@ RUN=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${LIST} | cut -f3)
 SAMPLE=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${LIST} | cut -f4)
 
 FASTQ_DIR=/scratch/ak308/Dholes/00_alignment/cleanedfastqs
-REF=/scratch/ak308/Dholes/00_alignment/reference/GCF_053574225.1_VMU_Caureus_v.1.0_genomic.fna
+REF=/scratch/ak308/Dholes/00_alignment/reference/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna
 OUT_DIR=/scratch/ak308/Dholes/00_alignment/bams
 
 module purge
