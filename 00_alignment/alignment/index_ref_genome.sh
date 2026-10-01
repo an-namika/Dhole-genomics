@@ -5,15 +5,15 @@
 #SBATCH --ntasks=1
 #SBATCH --mem-per-cpu=20G
 #SBATCH --time=22:30:00
-#SBATCH --output=/scratch/lh106/Indianfox/slurmout/bwa_index_%j.out
-#SBATCH --error=/scratch/lh106/Indianfox/slrmout/bwa_index_%j.err
+#SBATCH --output=/home/ak308/Dholes/output/bwa_index_%j.out
+#SBATCH --error=/home/ak308/Dholes/output/bwa_index_%j.err
 
 set -euo pipefail
 
 module load GCCcore/12.3.0
 module load BWA/0.7.18
 
-REF=/scratch/lh106/Indianfox/RedFoxRefGenome/ncbi_dataset/data/GCA_964106825.2/GCA_964106825.2_mVulVul1.hap1.2_genomic.fasta
+REF=/scratch/ak308/Dholes/00_alignment/reference/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna.gz
 
 # module load ...   # e.g. module load GCC/12.2.0 BWA SAMtools
 
