@@ -6,6 +6,8 @@
 #SBATCH --time=2-23:00:00
 #SBATCH --output=/scratch/lh106/GoldenJackal/slurmout/alignment_GoldenJackal_.out
 #SBATCH --error=/scratch/lh106/GoldenJackal/slurmout/alignment_GoldenJackal_.err
+#SBATCH --output=/scratch/ak308/Dhole/slurmout/alignment_%A_%a.out
+#SBATCH --error=/scratch/ak308/Dhole/slurmout/alignment_%A_%a.err
 #SBATCH --array=1
 
 echo "My SLURM_ARRAY_TASK_ID: ${SLURM_ARRAY_TASK_ID}"
