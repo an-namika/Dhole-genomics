@@ -12,7 +12,7 @@
 
 echo "My SLURM_ARRAY_TASK_ID: ${SLURM_ARRAY_TASK_ID}"
 
-LIST=/scratch/lh106/ak30/scripts/listfastqfiles.txt
+LIST=/scratch/ak308/Dholes/00_alignment/scripts/listfastqfiles.txt
 
 READ1=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${LIST} | cut -f1)
 READ2=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${LIST} | cut -f2)
