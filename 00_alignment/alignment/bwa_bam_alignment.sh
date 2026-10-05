@@ -19,9 +19,9 @@ READ2=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${LIST} | cut -f2)
 RUN=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${LIST} | cut -f3)
 SAMPLE=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${LIST} | cut -f4)
 
-FASTQ_DIR=/scratch/lh106/GoldenJackal/cleaned_fastqs
-REF=/scratch/lh106/GoldenJackal/RefGenome/GCF_053574225.1_VMU_Caureus_v.1.0_genomic.fna
-OUT_DIR=/scratch/lh106/GoldenJackal/bams
+FASTQ_DIR=/scratch/ak308/Dholes/00_alignment/cleanedfastq
+REF=/scratch/ak308/Dholes/00_alignment/reference/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna
+OUT_DIR=/scratch/ak308/Dholes/00_alignment/bams
 
 module purge
 module load GCCcore/12.3.0
