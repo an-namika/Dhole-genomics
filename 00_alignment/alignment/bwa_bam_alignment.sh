@@ -34,16 +34,16 @@ module load BWA/0.7.18
 #    ${REF} \
 #    ${FASTQ_DIR}/${READ1} \
 #    ${FASTQ_DIR}/${READ2} \
-#    > ${OUT_DIR}/${SAMPLE}.sam
+#    > ${OUT_DIR}/${RUN}.sam
 
 module purge
 module load GCC/13.2.0
 module load SAMtools/1.19.2
 
 samtools view \
-    -bS ${OUT_DIR}/${SAMPLE}.sam | \
+    -bS ${OUT_DIR}/${RUN}.sam | \
 samtools sort \
-    -o ${OUT_DIR}/${SAMPLE}.sorted.bam
+    -o ${OUT_DIR}/${RUN}.sorted.bam
 
 samtools index \
-    ${OUT_DIR}/${SAMPLE}.sorted.bam
+    ${OUT_DIR}/${RUN}.sorted.bam
