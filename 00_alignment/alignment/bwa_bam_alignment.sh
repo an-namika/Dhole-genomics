@@ -8,7 +8,7 @@
 #SBATCH --time=2-23:00:00
 #SBATCH --output=/scratch/ak308/Dholes/output/alignment_Dhole_bam.out
 #SBATCH --error=/scratch/ak308/Dholes/output/alignment_Dhole_bam.err
-#SBATCH --array=1-30
+#SBATCH --array=1-22%10
 
 echo "My SLURM_ARRAY_TASK_ID: ${SLURM_ARRAY_TASK_ID}"
 
