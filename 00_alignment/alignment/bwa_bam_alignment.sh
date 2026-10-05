@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=goldenjackal
+#SBATCH --job-name=dhole_bams
 #SBATCH --account=commons
 #SBATCH --partition=long
 #SBATCH --ntasks=1
