@@ -6,8 +6,8 @@
 #SBATCH --mem=40G
 #SBATCH --cpus-per-task=16
 #SBATCH --time=2-23:00:00
-#SBATCH --output=/scratch/ak308/Dholes/output/alignment_Dhole_bam.out
-#SBATCH --error=/scratch/ak308/Dholes/output/alignment_Dhole_bam.err
+#SBATCH --output=/scratch/ak308/Dholes/output/alignment_Dhole_bam%A_%a.out
+#SBATCH --error=/scratch/ak308/Dholes/output/alignment_Dhole_bam%A_%a.err
 #SBATCH --array=1-22%10
 
 echo "My SLURM_ARRAY_TASK_ID: ${SLURM_ARRAY_TASK_ID}"
