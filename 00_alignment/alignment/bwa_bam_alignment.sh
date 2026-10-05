@@ -6,13 +6,13 @@
 #SBATCH --mem=40G
 #SBATCH --cpus-per-task=16
 #SBATCH --time=2-23:00:00
-#SBATCH --output=/scratch/ak308/Dholes/output/alignment_Dhole.out
-#SBATCH --error=/scratch/ak308/Dholes/output/alignment_Dhole.err
+#SBATCH --output=/scratch/ak308/Dholes/output/alignment_Dhole_bam.out
+#SBATCH --error=/scratch/ak308/Dholes/output/alignment_Dhole_bam.err
 #SBATCH --array=1-30
 
 echo "My SLURM_ARRAY_TASK_ID: ${SLURM_ARRAY_TASK_ID}"
 
-LIST=/scratch/lh106/GoldenJackal/scripts/listfastqfiles.txt
+LIST=/scratch/lh106/ak30/scripts/listfastqfiles.txt
 
 READ1=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${LIST} | cut -f1)
 READ2=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${LIST} | cut -f2)
