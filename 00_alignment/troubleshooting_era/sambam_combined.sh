@@ -10,7 +10,6 @@
 #SBATCH --error=/scratch/ak308/Dholes/output/alignment_Dhole_sambam%A_%a.err
 #SBATCH --array=1-20%10
  
-# Stop the job if any step fails, so a broken SAM never gets turned into a BAM
 set -eo pipefail
  
 echo "My SLURM_ARRAY_TASK_ID: ${SLURM_ARRAY_TASK_ID}"
