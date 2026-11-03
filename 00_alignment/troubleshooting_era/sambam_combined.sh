@@ -1,4 +1,3 @@
-
 #!/bin/bash
 #SBATCH --job-name=dhole_sambam
 #SBATCH --account=commons
