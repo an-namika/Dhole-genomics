@@ -8,13 +8,14 @@
 #SBATCH --time=2-23:00:00
 #SBATCH --output=/scratch/ak308/Dholes/output/alignment_Dhole_sambam%A_%a.out
 #SBATCH --error=/scratch/ak308/Dholes/output/alignment_Dhole_sambam%A_%a.err
-#SBATCH --array=1-22%10
+#SBATCH --array=1-20%10
  
+# Stop the job if any step fails, so a broken SAM never gets turned into a BAM
 set -eo pipefail
  
 echo "My SLURM_ARRAY_TASK_ID: ${SLURM_ARRAY_TASK_ID}"
  
-LIST=/scratch/ak308/Dholes/00_alignment/scripts/listfastqfiles.txt
+LIST=/scratch/ak308/Dholes/scripts/listfastqfiles.txt
  
 READ1=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${LIST} | cut -f1)
 READ2=$(sed "${SLURM_ARRAY_TASK_ID}q;d" ${LIST} | cut -f2)
