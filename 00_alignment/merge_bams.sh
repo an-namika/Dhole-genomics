@@ -6,9 +6,8 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=40G
 #SBATCH --time=23:00:00
-#SBATCH --output=/scratch/ak308/Dholes/output/check_depth_%A_%a.out
-#SBATCH --error=/scratch/ak308/Dholes/output/check_depth_%A_%a.err
-#SBATCH --array=1-12%10
+#SBATCH --output=/scratch/ak308/Dholes/output/check_depth.out
+#SBATCH --error=/scratch/ak308/Dholes/output/check_depth.err
 
 set -euo pipefail
 
