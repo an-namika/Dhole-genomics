@@ -14,10 +14,10 @@ module purge
 module load GCC/13.2.0
 module load SAMtools/1.19.2
 
-echo “My SLURM_ARRAY_TASK_ID: $SLURM_ARRAY_TASK_ID”
+echo "My SLURM_ARRAY_TASK_ID: " $SLURM_ARRAY_TASK_ID
+BAM=$(sed "${SLURM_ARRAY_TASK_ID}q;d" /scratch/ak308/Dholes/00_alignment/bams/bam_list.txt | cut -f1)
 
 DIR=/scratch/ak308/Dholes/00_alignment/bams
-BAM=/scratch/ak308/Dholes/00_alignment/bams/bam_list.txt
 OUTDIR=/scratch/ak308/Dholes/00_alignment/depth
 
 samtools depth -a ${DIR}/${BAM} | awk ‘{sum+=$3; cnt++} END {print sum/cnt}’ > ${OUTDIR}/${BAM}_average_depth.txt
