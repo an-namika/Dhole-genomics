@@ -9,8 +9,6 @@
 #SBATCH --output=/scratch/ak308/Dholes/output/check_depth.out
 #SBATCH --error=/scratch/ak308/Dholes/output/check_depth.err
 
-set -euo pipefail
-
 module purge
 module load GCC/13.2.0
 module load SAMtools/1.19.2
