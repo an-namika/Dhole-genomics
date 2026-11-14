@@ -12,10 +12,7 @@
 module purge
 module load GCC/13.2.0
 module load SAMtools/1.19.2
- 
-# turn strict mode on AFTER modules load (module scripts can trip set -u)
-set -euo pipefail
- 
+  
 BAM_DIR=/scratch/ak308/Dholes/00_alignment/bams
 LIST=${BAM_DIR}/bam_list_merge.txt
 OUT=${BAM_DIR}/Dhole_SAMN03168405_China_merged.bam
