@@ -27,3 +27,16 @@ filtering for: quality, depth, (at BAMs, or more commonly @ VCF)
 - also for minor allele frequency
 - perhaps.... depends on how heavily you will filter (high-quality SNPs for relatedness vs SNP density)
 - 
+
+
+* question: what about FastQC??
+
+  - /// why is it used in certain times vs others?
+ 
+  common: to filter minimum mapping quality <20 (99% predicted accuracy)
+  - exclude reads not properly paired
+  - or mapped ambiguously
+  - some people, for depth filtering, will do 2-2.5x above avg/-50% within a file (look up what other people did.)
+  - and exclude sites w a lot of missing data (#individuals/N)
+  - will run a program in ANGSD where they fix alignment around InDels
+  - 
