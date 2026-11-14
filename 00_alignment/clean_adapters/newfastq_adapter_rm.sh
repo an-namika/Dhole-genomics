@@ -9,8 +9,7 @@
 #SBATCH --error=/home/ak308/Dholes/output/adapter_new_%A_%a.err
 #SBATCH --array=1-2
  
-# Adapter trimming for the two unpublished dholes (India wild SO15487, SD Zoo USNM587829).
-# Same as the published-FASTQ version; only LIST, DIR and the array changed.
+# Adapter trimming for the two new dholes (India wild SO15487, SD Zoo USNM587829).
  
 echo "My SLURM_ARRAY_TASK_ID: $SLURM_ARRAY_TASK_ID"
  
