@@ -13,8 +13,10 @@
 eval "$(conda shell.bash hook)"
 conda activate angsd_env
 
+cd /scratch/ak308/Dholes/01_heterozygosity
+
 SAMPLES=(Dhole_SO15487_India_wild Dhole_USNM587829_SDZoo)
-DEPTHS=( )    #EDIT THIS ONCE THE DEPTH SCRIPTS FINISH RUNNING
+DEPTHS=(9 10)    # (India 8.6, SD 10.1)
 
 SAMPLE=${SAMPLES[$SLURM_ARRAY_TASK_ID-1]}
 MEAN=${DEPTHS[$SLURM_ARRAY_TASK_ID-1]}
