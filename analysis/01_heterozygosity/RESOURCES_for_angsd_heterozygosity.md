@@ -12,5 +12,5 @@ Hack MD w/ Canada lynx:  https://hackmd.io/@tlama/heterozygosity
 https://pespenilab.github.io/Ecological-Genomics/Fall2025/tutorials/EcoGen2025_PopGenomics4_Diversity.html
 - guidance for the sliding window structure - structure: realSFS saf2theta → thetaStat do_stat with -win/-step set equal for non-overlapping windows
 
-https://github.com/ANGSD/angsd/wiki/SFS
+https://github.com/ANGSD/angsd/wiki
 - background on doSaf and realSFS
