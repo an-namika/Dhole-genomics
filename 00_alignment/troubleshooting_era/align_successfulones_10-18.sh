@@ -10,7 +10,6 @@
 #SBATCH --error=/scratch/ak308/Dholes/output/alignment_Dhole_%A_%a.err
 #SBATCH --array=1-11%10
  
-# Stop this task at the first failure
 set -euo pipefail
  
 echo "My SLURM_ARRAY_TASK_ID: ${SLURM_ARRAY_TASK_ID}"
