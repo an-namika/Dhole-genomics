@@ -8,7 +8,7 @@
 #SBATCH --ntasks=1
 #SBATCH --time=4:00:00                  
 #SBATCH --mem-per-cpu=1000m 
-#SBATCH --array=1-62%6                   # 62 active files, max 6 downloading at once (suggested to not overload system?)
+#SBATCH --array=1-62%6                   # 62 active files, max 6 downloading at once (suggested to not overload system?) -- in the end, i think i ended up setting this to %2 for most of the time, and even then 30-50% would still fail! but we're getting there, slowly but surely....
 #SBATCH --output=/home/ak308/Dholes/output/fastq_dl_%A_%a.out
 #SBATCH --error=/home/ak308/Dholes/output/fastq_dl_%A_%a.err
 
