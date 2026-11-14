@@ -1,4 +1,4 @@
-# resources i used for the "TEMPLATE" scripts to adapt as more BAM files get completed: 
+# resources for the "TEMPLATE" scripts to adapt as more BAM files get completed: 
 
 https://www.popgen.dk/angsd/index.php/Heterozygosity
 - doSaf 1 → realSFS → middle value ÷ sum
