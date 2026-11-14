@@ -1,14 +1,6 @@
+# this is definitely overcomplicated, but was getting desperate w all the difficulties w ENA ... if it works, it works? 
+
 #!/bin/bash
-# =============================================================================
-# Purpose: batch download of published FASTQ files from ENA
-#
-# Run from:  .../scratch/.../publishedfastq/
-# Needs:     fastq_list.tsv  
-# Submit with:   sbatch download_fastq_array_v2.sh
-# =============================================================================
-
-set -euo pipefail
-
 #SBATCH --job-name=fastq_download
 #SBATCH --account=commons              
 #SBATCH --partition=commons            
