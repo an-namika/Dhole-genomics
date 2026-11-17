@@ -4,7 +4,7 @@
 #SBATCH --partition=commons
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
-#SBATCH --mem=16G
+#SBATCH --mem=64G
 #SBATCH --time=23:00:00
 #SBATCH --output=/scratch/ak308/Dholes/output/het_angsd_%A_%a.out
 #SBATCH --error=/scratch/ak308/Dholes/output/het_angsd_%A_%a.err
