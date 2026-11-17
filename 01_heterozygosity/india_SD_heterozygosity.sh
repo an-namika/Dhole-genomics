@@ -16,7 +16,7 @@ conda activate angsd_env
 cd /scratch/ak308/Dholes/01_heterozygosity
 
 SAMPLES=(Dhole_SO15487_India_wild Dhole_USNM587829_SDZoo)
-DEPTHS=(9 10)    # (India 8.6, SD 10.1)
+DEPTHS=(9 10)    # whole-number mean depths, same order as SAMPLES (India 8.6, SD 10.1)
 
 SAMPLE=${SAMPLES[$SLURM_ARRAY_TASK_ID-1]}
 MEAN=${DEPTHS[$SLURM_ARRAY_TASK_ID-1]}
@@ -25,7 +25,7 @@ BAMDIR=/scratch/ak308/Dholes/00_alignment/bams
 REF=/scratch/ak308/Dholes/00_alignment/reference/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna
 
 angsd -i ${BAMDIR}/${SAMPLE}.sorted.bam -ref $REF -anc $REF -out $SAMPLE -P 8 \
-  -GL 2 -doSaf 1 \
+  -GL 1 -doSaf 1 \
   -minMapQ 20 -minQ 20 \
   -only_proper_pairs 1 -uniqueOnly 1 -remove_bads 1 \
   -baq 1 -C 50 \
