@@ -13,6 +13,8 @@
 eval "$(conda shell.bash hook)"
 conda activate angsd_env
 
+set -e   
+
 cd /scratch/ak308/Dholes/01_heterozygosity
 
 SAMPLES=(Dhole_SO15487_India_wild Dhole_USNM587829_SDZoo)
@@ -31,6 +33,6 @@ angsd -i ${BAMDIR}/${SAMPLE}.sorted.bam -ref $REF -anc $REF -out $SAMPLE -P 8 \
   -baq 1 -C 50 \
   -doCounts 1 -setMinDepth $((MEAN / 2)) -setMaxDepth $((MEAN * 2))
 
-realSFS ${SAMPLE}.saf.idx > ${SAMPLE}.ml
+realSFS ${SAMPLE}.saf.idx -P 8 > ${SAMPLE}.ml
 
 awk '{print $2 / ($1 + $2 + $3)}' ${SAMPLE}.ml > ${SAMPLE}.het.txt
