@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 #SBATCH --job-name=het_angsd
 #SBATCH --account=commons
 #SBATCH --partition=commons
