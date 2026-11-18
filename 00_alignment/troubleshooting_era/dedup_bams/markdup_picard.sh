@@ -13,8 +13,7 @@
 # Removes PCR/optical duplicates from coordinate-sorted BAMs with Picard MarkDuplicates.
 # To add more samples: add BAM file names to BAMS and raise --array to match (e.g. 1-5).
 
-# >>> check exact module names first with: module spider picard <<<
-module load picard
+module load picard/2.25.1-Java-11
 module load SAMtools/1.19.2
 
 set -e
@@ -33,14 +32,13 @@ NAME=${NAME%.sorted}      # e.g. Dhole_SO15487_India_wild
 
 echo "Input: ${BAMDIR}/${BAM}"
 
-# Picard on EasyBuild clusters: jar is at $EBROOTPICARD/picard.jar
 java -Xmx28g -jar $EBROOTPICARD/picard.jar MarkDuplicates \
-  --INPUT ${BAMDIR}/${BAM} \
-  --OUTPUT ${OUTDIR}/${NAME}.dedup.bam \
-  --METRICS_FILE ${OUTDIR}/${NAME}.dedup_metrics.txt \
-  --REMOVE_DUPLICATES true \
-  --ASSUME_SORT_ORDER coordinate \
-  --TMP_DIR $TMPDIR
+  INPUT=${BAMDIR}/${BAM} \
+  OUTPUT=${OUTDIR}/${NAME}.dedup.bam \
+  METRICS_FILE=${OUTDIR}/${NAME}.dedup_metrics.txt \
+  REMOVE_DUPLICATES=true \
+  ASSUME_SORT_ORDER=coordinate \
+  TMP_DIR=$TMPDIR
 
 samtools index -@ 4 ${OUTDIR}/${NAME}.dedup.bam
 samtools flagstat -@ 4 ${OUTDIR}/${NAME}.dedup.bam > ${OUTDIR}/${NAME}.dedup.flagstat.txt
