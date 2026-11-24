@@ -30,5 +30,5 @@ done < ${LIST}
 samtools merge -f -@ 8 -b ${LIST} -o ${OUT}
 samtools index ${OUT}
 samtools flagstat ${OUT} > ${BAM_DIR}/Dhole_SAMN03168405_China_merged.flagstat.txt
- 
+
 echo "Finished merging BAMs"
