@@ -197,5 +197,7 @@ and the India population
 
 # heterozygosity: ethiopian wolf has very low. versus ROH's -- the Ethiopian wolf has a lot of SHORT ROH's (not too 
 
+papers mentioned as reference: https://academic.oup.com/mbe/article/40/1/msac277/6966048
+Isle Royale: https://doi-org.ezproxy.rice.edu/10.1126/sciadv.aau0757
 
 TRY TO MAKE A SIMILAR FIGURE FOR THE DHOLE: Fig 3 -- Isle Royale -- look at this paper for inspiration for figures!!!!!!!
