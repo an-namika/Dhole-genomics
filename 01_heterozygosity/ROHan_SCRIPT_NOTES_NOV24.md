@@ -176,7 +176,7 @@ not a lot of variation toward adapting toward future bc lost a lot of their alte
 
 see w the program: Mexican wolf: ROHs::: genome. ROH: Recent and long-term inbreeding..... s42003 -- Continent-wide view of genetic diversity 
 
-
+* outcome: ended up doing 1 array script, and fixing syntax errors evident above. 
 
 *** DOWNLOAD THIS ONE: SAMN02921314 ---
 ** Dholes: show little ROH's 
